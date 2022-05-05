@@ -1,0 +1,20 @@
+body{
+    background-color: blanchedalmond;
+}
+
+.container{
+    
+    width: 360px;
+    height: 360px;
+    border: 3px solid blue;
+    display: grid;
+    margin: 100px;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+}
+
+.grid{
+    background-color: white;
+    border: 1px solid gray;
+    padding: 10px 10px;
+    
+}
