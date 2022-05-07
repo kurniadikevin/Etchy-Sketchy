@@ -1,5 +1,6 @@
 // make grid and eventListener
 function makeGrid(input){
+    if( input <= 100){
         let container = document.querySelector('.container');
         container.style.gridTemplateColumns =   `repeat( ${input}, auto)`
         container.style.gridTemplateRows =   `repeat( ${input}, auto)`
@@ -16,6 +17,9 @@ function makeGrid(input){
                 object.target.style.backgroundColor = "black";
             })
             };
+    } else {
+        alert('Maximum number is 100')
+    }
 };
 
 document.querySelector('.gridSize').innerHTML = "16 X 16"
@@ -23,7 +27,6 @@ makeGrid(16);
 
 //button function
 const inputGrid = function(){
-   
     input = prompt ("Enter Grid Size","16");
     if (prompt != null  ){
         const gridAll = document.querySelectorAll ('.grid');
@@ -32,8 +35,7 @@ const inputGrid = function(){
         }
         document.querySelector('.gridSize').innerHTML =
         input + "x" + input;
-
-       makeGrid(input);
+        makeGrid(input);
     }
 }
 
