@@ -8,15 +8,7 @@ function makeGrid(input){
             const grid = document.createElement('div');
             grid.classList.add('grid');
             container.appendChild(grid);
-        }
-
-        const gridAll = document.querySelectorAll ('.grid');
-
-        for (i=0; i < gridAll.length; i++){ 
-            gridAll[i].addEventListener('mouseover',function(object){
-                object.target.style.backgroundColor = "black";
-            })
-            };
+        } 
     } else {
         alert('Maximum number is 100')
     }
@@ -39,8 +31,22 @@ const inputGrid = function(){
     }
 }
 
+let input = document.querySelector('#colorPicker');
+input.addEventListener('input',updateValue);
+function updateValue(e) {
+  
+    const gridAll = document.querySelectorAll('.grid');
+    gridAll.forEach((td) => {
+        td.style.setProperty('--grid-background-color', e.target.value);//hover color
 
+})
+    for (i=0; i < gridAll.length; i++){ 
+        gridAll[i].addEventListener('click',function(object){
+            object.target.style.backgroundColor = e.target.value; // event listener grid color
+        })
+        };
+    };
 
-
-// make default grid change to new grid
-// reset grid everytime input update
+/*
+- color pick default should be black
+- how to not reset colorpick everytime changing grid size*/

@@ -2,24 +2,27 @@ body{
     background-color: blanchedalmond;
 }
 
+h1{
+   
+}
 .container{
     
-    width: 360px;
-    height: 360px;
-    border: 3px solid blue;
+    width: 400px;
+    height: 400px;
+    border: 3px solid red;
     display: grid;
     margin: 100px;
-    /*grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;*/
+    
 }
 
 .grid{
     
-    background-color: white;
-    border: 1px solid gray;
+    background-color: blanchedalmond;
+    border: 1px dotted gray;
     padding:0%;
     
 }
 
-.grid:hover {
-    background-color: black;
+.container .grid:hover {
+    background-color: var(--grid-background-color);
 }
